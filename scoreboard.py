@@ -20,3 +20,8 @@ class ScoreBoard(Turtle):
         self.clear()
         self.write(f"Your Score: {self.score}", align=ALIGN, font=FONT)
 
+
+    def gameOver(self):
+        self.goto(0,0)
+        self.write("GAME OVER", align=ALIGN, font=FONT)
+
