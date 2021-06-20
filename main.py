@@ -28,12 +28,13 @@ game_is_on = True
 
 while game_is_on:
     screen.update()
-    time.sleep(0.08)
+    time.sleep(0.1)
 
     snake.move()
 
     if(snake.head.distance(food) < 18):
         food.refresh()
+        snake.extend()
         board.increaseScore()
 
     if(snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280):
